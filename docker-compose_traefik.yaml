@@ -1,0 +1,31 @@
+#https://pentacent.medium.com/lets-encrypt-for-your-docker-app-in-less-than-5-minutes-24e5b38ca40b
+version: '3.4'
+services:
+  filesrepository-traefik:
+    image: traefik:2.1
+    restart: always
+    ports:
+      #- '80:80'
+      - '443:443'
+    volumes:
+    - traefik:/etc/traefik
+    - /var/run/docker.sock:/var/run/docker.sock:ro
+  filerepositoryapi:
+    image: filerepositoryapiprivate
+    container_name: filerepositoryapi
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.filerepositoryapi.rule=Host(`ducal.ddns.net`) && PathPrefix(`/api/FileList`) '
+      - 'traefik.http.routers.filerepositoryapi.tls=true'
+      - 'traefik.http.routers.filerepositoryapi.tls.certresolver=lets-encrypt'
+  filerepositorygui:
+    image: filerepositoryguiprivate
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.filerepositorygui.rule=Host(`ducal.ddns.net`)'
+      - 'traefik.http.routers.filerepositorygui.tls=true'
+      - 'traefik.http.routers.filerepositorygui.tls.certresolver=lets-encrypt'
+    container_name: filerepositorygui
+volumes:
+  traefik:
+    external: true

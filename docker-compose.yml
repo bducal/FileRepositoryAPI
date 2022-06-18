@@ -1,0 +1,15 @@
+version: '3'
+services:
+  filerepositoryapi:
+    image: filerepositoryapi
+    container_name: filerepositoryapi-run
+    ports: 
+      - "5155:88"
+
+  filerepositorygui:
+    image: filerepositorygui
+    ports: 
+      - "80:80"
+    container_name: filerepositorygui-run
+  
+  

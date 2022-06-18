@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: filerepositoryapi
+  namespace: ingress-basic
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: filerepositoryapi
+  template:
+    metadata:
+      labels:
+        app: filerepositoryapi
+    spec:
+      containers:
+        #CHANGE IMAGE PATH TO RESPECT YOUR ACR
+        - image: acrducal.azurecr.io/filerepositoryapi
+          ports:
+          - containerPort: 88
+          name: filerepositoryapi
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: filerepositoryapi-service
+  namespace: ingress-basic
+  labels:
+    app: filerepositoryapi
+spec:
+  type: ClusterIP
+  selector:
+    app: filerepositoryapi
+  ports:
+    - port: 8999  #useless
+      targetPort: 88
+
+# optional loadbalancer - usefull for debuugging
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: example-servicelb-api2
+#   namespace: ingress-basic
+# spec:
+#   selector:
+#     app: filerepositoryapi
+#   ports:
+#     - port: 89
+#       targetPort: 88
+#   type: LoadBalancer
+
+
