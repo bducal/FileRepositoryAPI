@@ -1,0 +1,59 @@
+# Highly certified Microsoft partner
+# Microsoft Certified Trainer for 25 years
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Freelancer/B2B
+  namespace: Microsoft Full Stack Developer
+  spec:
+    type: "Azure, C#, SQL, DevOps, PowerBI, PowerApps, Synapse"
+  
+
+# Azure passionate, data analyst, software developer and Microsoft SQL Server expert with 25 years of experience ready to help you now!
+
+# What I can do for you: 
+
+# Cloud solution development and administration
+# •	Prepare, configure and manage Azure DevOps environment
+# •	Migrate your IT infrastructure and resources to Microsoft Azure
+# •	Microsoft 365 implementation, migration and administration
+# •	Data analysis and Machine Learning
+# •	Dynamics 365 Sales and Field Service customization and implementation
+# •	Power Apps and Power Automate and Power BI development
+# •	Microsoft Teams advanced configuration and administration
+
+
+# Microsoft SQL Server
+# •	Take over administration of your SQL Servers
+# •	Provide authorized MOC trainings and dedicated workshops in the field of SQL Server and Powe BI
+# •	Carry out audits of the proper installation, configuration and security of SQL Server
+# •	Tune and optimize complex queries, stored procedures and triggers
+# •	Develop ETL processes (on-premise or in Azure)
+# •	Implement analytical and reporting solutions based on the Power BI or SSRS platform
+# •	Migrate your SQL infrastructure to Azure and Azure Synapse
+# •	Implement High Availability Solutions
+# •	Provide good practices based on 25 years of experience
+
+# Software development - C# & .NET
+# •	Angular
+# •	Docker, Kubernetes, DevOps pipelines
+# •	PowerApps, Power BI
+# •	MVC web business application development 
+# •	C# RESTful API
+# •	ASP.NET/.NET Core web applications 
+# •	Classic Windows forms application development
+
+# Expertise in other IT technologies
+# •	Windows Server administration
+# •	Exchange Server administration
+# •	SharePoint Server administration
+# •	SOPHOS UTM
+# •	SpamTitam
+# •	Avaya communication solutions
+
+# Holding several (valid!) Microsoft Expert and Associate certifications related to technologies mentioned above
+
+# I am providing consultancy and development services in the areas of my expertise
+# Rates per project or per hour
+# Working remotely or locally in Warsaw/Poland area

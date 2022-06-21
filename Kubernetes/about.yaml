@@ -1,0 +1,11 @@
+# Highly certified Microsoft partner
+# Microsoft Certified Trainer for 25 years
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Freelancer/B2B
+  namespace: Microsoft Full Stack Developer
+  spec:
+    type: "Azure, C#, SQL, DevOps, PowerBI, PowerApps, Synapse"
+  
